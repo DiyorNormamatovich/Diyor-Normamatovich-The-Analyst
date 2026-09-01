@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce Data Analysis Portfolio</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 40px 20px;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  
+  .header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+  }
+  
+  .header h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  
+  .header p {
+    font-size: 18px;
+    opacity: 0.95;
+    margin-bottom: 8px;
+  }
+  
+  .header .subtitle {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  
+  .content {
+    padding: 50px 40px;
+  }
+  
+  .section {
+    margin-bottom: 50px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    color: #667eea;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #667eea;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .icon {
+    font-size: 32px;
+  }
+  
+  .project {
+    background: #f8f9ff;
+    border-left: 5px solid #667eea;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .project:hover {
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
+    transform: translateX(5px);
+  }
+  
+  .project-title {
+    font-size: 18px;
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .badge {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  
+  .code-block {
+    background: #2d3748;
+    color: #e2e8f0;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 12px 0;
+    border-left: 3px solid #667eea;
+  }
+  
+  .result-box {
+    background: #f0fdf4;
+    border-left: 4px solid #22c55e;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 12px 0;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #166534;
+  }
+  
+  .description {
+    color: #4a5568;
+    margin: 15px 0;
+    line-height: 1.7;
+  }
+  
+  .key-insight {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-left: 4px solid #f59e0b;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 15px 0;
+    color: #92400e;
+    font-weight: 500;
+  }
+  
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .stat-card {
+    background: white;
+    border: 2px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .stat-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #667eea;
+    margin: 8px 0;
+  }
+  
+  .stat-label {
+    font-size: 12px;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .highlight {
+    background: #fef3c7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  
+  .footer {
+    background: #f8f9ff;
+    padding: 30px 40px;
+    text-align: center;
+    color: #718096;
+    font-size: 14px;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  .keyword { color: #ff79c6; }
+  .string { color: #f1fa8c; }
+  .number { color: #bd93f9; }
+  .function { color: #8be9fd; }
+  
+  code {
+    background: #e2e8f0;
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📊 E-Commerce Data Analysis Portfolio</h1>
+      <p>Python & SQL запросы для аналитики</p>
+      <span class="subtitle">Анализ 3391 заказов, выручка и стратегия скидок</span>
+    </div>
+    
+    <div class="content">
+      <!-- PYTHON SECTION -->
+      <div class="section">
+        <div class="section-title">
+          <span class="icon">🐍</span> Python (Pandas)
+        </div>
+        
+        <!-- Project 1 -->
+        <div class="project">
+          <span class="badge">Анализ доходов</span>
+          <div class="project-title">1️⃣ Минимальный, средний и максимальный доход</div>
+          <div class="description">
+            Использовал агрегирующую функцию <code>agg()</code> для быстрого получения статистических показателей по колонке revenue.
+          </div>
+          <div class="code-block">df.agg({'revenue' : ['min', 'mean', 'max']})</div>
+          <div class="result-box">
+            min:  11.21<br>
+            mean: 1021.96<br>
+            max:  4119.33
+          </div>
+          <div class="key-insight">
+            💡 Вывод: Компания имеет хорошую вариативность доходов. Средняя выручка ~1000, что указывает на стабильный бизнес с возможностью роста через крупные заказы.
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project">
+          <span class="badge">Категории продуктов</span>
+          <div class="project-title">2️⃣ Доход по категориям товаров</div>
+          <div class="description">
+            Группировка по <code>product_category</code> с суммированием доходов и сортировкой в убывающем порядке.
+          </div>
+          <div class="code-block">df.groupby('product_category')['revenue'].sum().sort_values(ascending=False)</div>
+          <div class="result-box">
+            Electronics: 1,829,899.22<br>
+            Clothing:   1,531,931.72<br>
+            Home:         982,083.92<br>
+            Beauty:       765,860.88
+          </div>
+          <div class="key-insight">
+            💡 Вывод: <span class="highlight">Electronics</span> — главный генератор доходов (37% выручки). Рекомендация: сосредоточить маркетинг и рекламу именно на этой категории.
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="project">
+          <span class="badge">Классификация скорости</span>
+          <div class="project-title">3️⃣ Разделение заказов по скорости доставки</div>
+          <div class="description">
+            Использовал метод <code>apply()</code> с пользовательской функцией для классификации заказов на "быстрые" (&lt;5 дней) и "медленные" (≥5 дней).
+          </div>
+          <div class="code-block"><span class="keyword">def</span> <span class="function">chen</span>(delivery_days):<br>
+    <span class="keyword">if</span> delivery_days <= <span class="number">5</span>:<br>
+        <span class="keyword">return</span> <span class="string">'fast'</span><br>
+    <span class="keyword">else</span>:<br>
+        <span class="keyword">return</span> <span class="string">'slow'</span><br>
+<br>
+df[<span class="string">'deliver_type'</span>] = df[<span class="string">'delivery_days'</span>].<span class="function">apply</span>(chen)</div>
+          <div class="result-box">
+            ✅ Добавлена новая колонка с категориями доставки<br>
+            ✅ Возможно теперь анализировать связь скорости доставки с рейтингом клиентов
+          </div>
+          <div class="key-insight">
+            💡 Вывод: Этот метод позволяет создавать сегменты заказов для дальнейшего анализа влияния доставки на удовлетворенность клиентов.
+          </div>
+        </div>
+        
+        <!-- Project 4 -->
+        <div class="project">
+          <span class="badge">Инвентарь</span>
+          <div class="project-title">4️⃣ Количество товаров по категориям</div>
+          <div class="description">
+            Анализ объёма продаж по каждой категории через группировку и суммирование количеств.
+          </div>
+          <div class="code-block">df.groupby('product_category')['quantity'].sum()</div>
+          <div class="result-box">
+            Electronics: 7,109 единиц<br>
+            Clothing:   6,171 единиц<br>
+            Home:       3,949 единиц<br>
+            Beauty:     2,995 единиц
+          </div>
+          <div class="stats">
+            <div class="stat-card">
+              <div class="stat-label">Всего товаров</div>
+              <div class="stat-value">20,224</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Топ категория</div>
+              <div class="stat-value">35%</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Project 5 -->
+        <div class="project">
+          <span class="badge">Географический анализ</span>
+          <div class="project-title">5️⃣ Доход по регионам</div>
+          <div class="description">
+            Региональный анализ для понимания, в каких географических зонах бизнес наиболее успешен.
+          </div>
+          <div class="code-block">df.groupby('region')['revenue'].sum().sort_values(ascending=False)</div>
+          <div class="result-box">
+            West:  1,345,582.16<br>
+            North: 1,281,508.45<br>
+            South: 1,246,640.90<br>
+            East:  1,236,044.23
+          </div>
+          <div class="key-insight">
+            💡 Вывод: Дифференциация по регионам незначительна (~2-3% разницы), что говорит о равномерном распределении спроса. Рост возможен везде.
+          </div>
+        </div>
+      </div>
+      
+      <!-- SQL SECTION -->
+      <div class="section">
+        <div class="section-title">
+          <span class="icon">🗄️</span> SQL (SQLite)
+        </div>
+        
+        <!-- SQL Project 1 -->
+        <div class="project">
+          <span class="badge">Региональные метрики</span>
+          <div class="project-title">1️⃣ Доход и количество заказов по регионам</div>
+          <div class="code-block"><span class="keyword">SELECT</span> region, <span class="function">SUM</span>(revenue) <span class="keyword">AS</span> total_revenue,<br>
+       <span class="function">COUNT</span>(order_id) <span class="keyword">AS</span> total_orders<br>
+<span class="keyword">FROM</span> ecommerce<br>
+<span class="keyword">GROUP BY</span> region<br>
+<span class="keyword">ORDER BY</span> total_revenue <span class="keyword">DESC</span>;</div>
+          <div class="result-box">
+            West:  1,345,582.16 (1,289 заказов)<br>
+            North: 1,281,508.45 (1,276 заказов)<br>
+            South: 1,246,640.90 (1,208 заказов)<br>
+            East:  1,236,044.23 (1,227 заказов)
+          </div>
+        </div>
+        
+        <!-- SQL Project 2 -->
+        <div class="project">
+          <span class="badge">VIP клиенты</span>
+          <div class="project-title">2️⃣ Топ-10 клиентов по выручке</div>
+          <div class="description">
+            Определение самых ценных клиентов для персонализированных стратегий удержания и увеличения LTV.
+          </div>
+          <div class="code-block"><span class="keyword">SELECT</span> customer_id, <span class="function">SUM</span>(revenue)<br>
+<span class="keyword">FROM</span> ecommerce<br>
+<span class="keyword">GROUP BY</span> customer_id<br>
+<span class="keyword">ORDER BY</span> revenue <span class="keyword">DESC</span><br>
+<span class="keyword">LIMIT</span> <span class="number">10</span>;</div>
+          <div class="result-box">
+            ID 1890:  12,529.37 (Топ VIP)<br>
+            ID 1779:   9,201.88<br>
+            ID 1608:   8,767.47<br>
+            ID 1474:   7,819.57
+          </div>
+          <div class="key-insight">
+            💡 Вывод: Топ клиент потратил в 7 раз больше чем средний. Нужна программа лояльности для удержания этих ценных клиентов!
+          </div>
+        </div>
+        
+        <!-- SQL Project 3 -->
+        <div class="project">
+          <span class="badge">Способы оплаты</span>
+          <div class="project-title">3️⃣ Популярность способов оплаты</div>
+          <div class="code-block"><span class="keyword">SELECT</span> payment_method, <span class="function">COUNT</span>(order_id) <span class="keyword">AS</span> total_orders<br>
+<span class="keyword">FROM</span> ecommerce<br>
+<span class="keyword">GROUP BY</span> payment_method<br>
+<span class="keyword">ORDER BY</span> total_orders <span class="keyword">DESC</span>;</div>
+          <div class="result-box">
+            Card:   2,270 заказов (56%)<br>
+            COD:    1,774 заказов (44%)<br>
+            Wallet:   956 заказов (24%)
+          </div>
+          <div class="key-insight">
+            💡 Вывод: Карты доминируют, но Cash-on-Delivery всё ещё значим. Рекомендация: продолжить поддерживать оба варианта.
+          </div>
+        </div>
+        
+        <!-- SQL Project 4 - MAIN -->
+        <div class="project" style="background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%); border-left-color: #f59e0b;">
+          <span class="badge" style="background: #f59e0b;">⭐ Ключевой анализ</span>
+          <div class="project-title">4️⃣ Влияние скидок на выручку по категориям</div>
+          <div class="description">
+            Комплексный анализ эффективности скидок. Расчёт средней скидки, среднего дохода и количества продаж по категориям.
+          </div>
+          <div class="code-block"><span class="keyword">SELECT</span> product_category,<br>
+       <span class="function">ROUND</span>(<span class="function">AVG</span>(discount) * <span class="number">100</span>, <span class="number">2</span>) <span class="keyword">AS</span> avg_discount_percent,<br>
+       <span class="function">ROUND</span>(<span class="function">SUM</span>(revenue), <span class="number">2</span>) <span class="keyword">AS</span> total_revenue,<br>
+       <span class="function">ROUND</span>(<span class="function">AVG</span>(revenue), <span class="number">2</span>) <span class="keyword">AS</span> avg_revenue_per_order,<br>
+       <span class="function">SUM</span>(quantity) <span class="keyword">AS</span> total_quantity_sold<br>
+<span class="keyword">FROM</span> ecommerce<br>
+<span class="keyword">GROUP BY</span> product_category<br>
+<span class="keyword">ORDER BY</span> avg_discount_percent <span class="keyword">DESC</span>;</div>
+          <div class="result-box">
+            <strong>Clothing:</strong> 18.43% скидка | 1,531,931.72 выручки | 1,000 единиц<br>
+            <strong>Beauty:</strong> 18.14% скидка | 765,860.88 выручки | 1,059 единиц<br>
+            <strong>Home:</strong> 17.83% скидка | 982,083.92 выручки | 1,013 единиц<br>
+            <strong>Electronics:</strong> 17.67% скидка | 1,829,899.22 выручки | 1,029 единиц
+          </div>
+        </div>
+        
+        <!-- SQL Project 5 - FINAL -->
+        <div class="project" style="background: linear-gradient(135deg, #f0fdf4 0%, #dbeafe 100%); border-left-color: #22c55e;">
+          <span class="badge" style="background: #22c55e;">✅ Итоговый вывод</span>
+          <div class="project-title">5️⃣ Рост выручки благодаря скидкам</div>
+          <div class="description">
+            Сравнение выручки между заказами без скидок и со скидками. Расчёт процентного прироста для каждой категории.
+          </div>
+          <div class="result-box" style="background: #f0fdf4; color: #166534;">
+            <strong>Clothing:</strong> 8,596.18% рост (!) 🚀<br>
+            <strong>Electronics:</strong> 6,514.44% рост<br>
+            <strong>Home:</strong> 5,364.35% рост<br>
+            <strong>Beauty:</strong> 3,754.21% рост
+          </div>
+          <div class="key-insight" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border-left-color: #3b82f6; color: #1e40af;">
+            <strong>🎯 ГЛАВНЫЙ ВЫВОД:</strong> Скидки являются супер-эффективным инструментом увеличения выручки! Особенно для категории Clothing, где скидки привели к росту выручки почти в 86 раз! Рекомендация: развивать стратегию динамических скидок с целью максимизации продаж.
+          </div>
+        </div>
+      </div>
+      
+      <!-- SUMMARY SECTION -->
+      <div class="section">
+        <div class="section-title">
+          <span class="icon">📈</span> Итоги анализа
+        </div>
+        <div class="stats">
+          <div class="stat-card">
+            <div class="stat-label">Проанализировано</div>
+            <div class="stat-value">3,391</div>
+            <div class="stat-label" style="margin-top: 8px;">заказов</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Общая выручка</div>
+            <div class="stat-value">5.8M</div>
+            <div class="stat-label" style="margin-top: 8px;">денежных единиц</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Используемые навыки</div>
+            <div class="stat-value">6</div>
+            <div class="stat-label" style="margin-top: 8px;">инструментов + методов</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Вывод</div>
+            <div class="stat-value">5</div>
+            <div class="stat-label" style="margin-top: 8px;">ключевых рекомендаций</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>📊 Портфолио проектов по анализу данных • Python Pandas • SQL Запросы • E-Commerce Analytics</p>
+    </div>
+  </div>
+</body>
+</html>
