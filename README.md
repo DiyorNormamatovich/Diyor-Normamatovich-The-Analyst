@@ -1,2 +1,1 @@
-# E-commerce-Data-Analysis
-e-commerce #businessinsights #analysis
+https://diyornormamatovich.github.io/E-commerce-Data-Analysis/
