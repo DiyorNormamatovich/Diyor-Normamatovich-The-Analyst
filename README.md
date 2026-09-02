@@ -1,50 +1,23 @@
-👨‍💻 Обо мне
+## Diyor Tolstenko Normamatovich, 19 лет:
 
-Диёр Толстенко Нормаматович
+# Оброзование:
+University: international Digital University
+Faculty: Data Science
+Проходил курсы Дата Аналитики в PROWEB, Alif Academy, MAAB Academy имеется сертификат по данной сфере
 
-19 лет · Ташкент, Узбекистан 🇺🇿
+# Языки:
+Узбекский - Родной
+Русский - В совершенстве
+Английский - IELTS B2
 
-Начинающий Data Analyst с сильной базой на уровне Junior и интересом к Data Science.
+# Навыки/Инструменты:
+SQL - SQLite, PostgreSQL, MySQL > (Basic)
+Python - Pandas, Numpy, Matplotlib > (basic)
+PowerBI - Visualisations (basic)
+Excel - Basic Functions and cleaning data 
+Claude - Promts for solving difficult problems in data,
+creating structured presentations
+for showing understandable view of data (Medium).
 
-В настоящее время обучаюсь на факультете Data Science в International Digital University (IDU). Развиваю навыки анализа данных, программирования, статистики и машинного обучения.
 
-Коммерческого опыта пока не имею, однако имею профильное образование, сертификат и практические проекты, которые формируют моё портфолио.
-
-🎓 Образование
-
-• International Digital University (IDU) — Data Science
-• Обучаюсь в настоящее время
-
-📚 Курсы и сертификаты
-
-• MAAB Academy — курс завершён
-• Alif Academy — курс завершён
-• PROWEB — Data Analytics, имеется сертификат
-
-🌍 Языки
-
-• 🇷🇺 Русский — свободное владение
-• 🇺🇿 Узбекский — свободное владение
-• 🇬🇧 Английский — IELTS 5.5
-
-💻 Навыки
-
-• 🐍 Python
-• 🐼 Pandas, Numpy, Matlotlib
-• 🗃️ SQL, PostgreSQL, MySQL
-• 📊 Power BI
-• 📈 Excel
-• 📉 Анализ и визуализация данных
-• 🔎 Исследовательский анализ данных (EDA)
-• 📐 Основы статистики
-• 💡 Аналитическое мышление
-
-🚀 Цель
-
-Получить первую позицию Junior Data Analyst, применить знания на реальных бизнес-задачах и получить коммерческий опыт.
-
-В дальнейшем планирую развиваться в направлении Data Science, углубляя знания в Python, статистике и машинном обучении.
-
-📂 Портфолио
-
-Здесь представлены мои учебные и практические проекты в области Data Analytics и Data Science, включая анализ данных, визуализации, дашборды и бизнес-исследования.
+# В данном портфолио я демонстрирую свои навыки в плане дата анализа.
