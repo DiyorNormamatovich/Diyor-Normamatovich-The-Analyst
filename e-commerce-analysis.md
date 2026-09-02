@@ -2,4 +2,4 @@
 
 Перейдите по ссылке ниже:
 
-Просмотр самого анализа[https://diyornormamatovich.github.io/Diyor-Normamatovich-The-Analyst]
+[https://diyornormamatovich.github.io/Diyor-Normamatovich-The-Analyst]
