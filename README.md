@@ -1,23 +1,24 @@
-## Diyor Tolstenko Normamatovich, 19 лет:
+Diyor Tolstenko Normamatovich
 
-# Оброзование:
-University: international Digital University
-Faculty: Data Science
-Проходил курсы Дата Аналитики в PROWEB, Alif Academy, MAAB Academy имеется сертификат по данной сфере
+Data Science Student | Junior Data Analyst
 
-# Языки:
-Узбекский - Родной
-Русский - В совершенстве
-Английский - IELTS B2
+19 лет • International Digital University, Faculty of Data Science 
 
-# Навыки/Инструменты:
-SQL - SQLite, PostgreSQL, MySQL > (Basic)
-Python - Pandas, Numpy, Matplotlib > (basic)
-PowerBI - Visualisations (basic)
-Excel - Basic Functions and cleaning data 
-Claude - Promts for solving difficult problems in data,
-creating structured presentations
-for showing understandable view of data (Medium).
+About Me
+
+Начинающий Data Analyst с интересом к анализу данных и визуализации. Прошел обучение в PROWEB, Alif Academy и MAAB Academy. Работаю с SQL, Python, Power BI и Excel.
+
+Skills
+SQL: PostgreSQL, MySQL, SQLite
+Python: Pandas, NumPy, Matplotlib
+BI: Power BI
+Excel: Data Cleaning, Basic Functions
+AI: Claude — анализ данных, решение задач и структурирование презентаций
 
 
-# В данном портфолио я демонстрирую свои навыки в плане дата анализа.
+Languages
+🇺🇿 Uzbek — Native
+🇷🇺 Russian — Fluent
+🇬🇧 English — IELTS B2
+
+В данном портфолио демонстрирую свои проекты и навыки в области анализа данных.
