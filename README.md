@@ -4,8 +4,7 @@ Data Science Student | Junior Data Analyst
 
 19 лет • International Digital University, Faculty of Data Science 
 
-About Me
-
+About Me:
 Начинающий Data Analyst с интересом к анализу данных и визуализации. Прошел обучение в PROWEB, Alif Academy и MAAB Academy. Работаю с SQL, Python, Power BI и Excel.
 
 Skills
